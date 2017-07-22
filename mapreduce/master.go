@@ -57,6 +57,8 @@ func (mr *MapReduce) RunMaster() *list.List {
 
 	mr.waitOkN(okChan, mr.nReduce)
 
+	close(jobChan)
+
 	return mr.KillWorkers()
 }
 func (mr *MapReduce) selectWorker(workerChan chan string) string {
