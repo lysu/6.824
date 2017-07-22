@@ -22,7 +22,7 @@ func main() {
 		} else if os.Args[1] == "-u" {
 			ok = ck.Unlock(os.Args[4])
 		} else {
-			usage()
+			usageLockc()
 		}
 		fmt.Printf("reply: %v\n", ok)
 	} else {

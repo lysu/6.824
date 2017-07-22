@@ -59,7 +59,7 @@ func main() {
 	}
 
 	if gid < 0 || me < 0 || len(masters) < 1 || me >= len(replicas) || dir == "" {
-		usage()
+		usageDiskvd()
 	}
 
 	runtime.GOMAXPROCS(4)
